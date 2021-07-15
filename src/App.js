@@ -1,38 +1,25 @@
-import React, { useState } from 'react';
+import React from 'react'
+import Main from './Home'
+import {Route} from 'react-router-dom'
+import {BrowserRouter as Router,Switch} from 'react-router-dom'
+import Description from './component/Description'
 
-import { moviesData } from './component/MoviesData';
-import Search from './component/Filter';
-import MoviesList from './component/MovieList';
-import AddMovie from './component/AddMovie';
 
-import './App.css';
-
-function App() {
-const [moviesList, setMoviesList] = useState(moviesData);
-const [searchMovie, setSearchMovie] = useState('');
-const [ratingSearch, setRatingSearch] = useState(1);
-
-const AddNewMovie = (e, newMovie) => {
-  e.preventDefault();
-  setMoviesList([...moviesList, newMovie]);
-};
-
-    return (
-      <div className='App'>
-        <h1 className="moviebest">BestMovies</h1>
-        <Search
-          setSearchMovie={setSearchMovie}
-          ratingSearch={ratingSearch}
-          setRatingSearch={setRatingSearch}
-        />
-        <AddMovie AddNewMovie={AddNewMovie} />
-        <MoviesList
-          moviesList={moviesList}
-          searchMovie={searchMovie}
-          ratingSearch={ratingSearch}
-        />
-      </div>
-    );
+function App({movie}) {
+  return (
+    <div>
+      <Router>
+        <Switch>
+        <Route exact path='/' component={Main}/>
+    
+        <Route path='/Description/:movieId' >
+         <Description movie={movie} />
+          </Route>
+          
+      </Switch>
+      </Router>
+    </div>
+  )
 }
 
-export default App;
+export default App

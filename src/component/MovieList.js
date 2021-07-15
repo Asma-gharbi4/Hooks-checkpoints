@@ -1,5 +1,5 @@
 import React from 'react';
-
+import {moviesData} from './MoviesData' 
 import MovieCard from './MovieCard';
 
 const MoviesList = ({ moviesList, searchMovie, ratingSearch }) => {
@@ -19,9 +19,10 @@ return (
             el.title.toLowerCase().includes(searchMovie.toLowerCase().trim()) &&
             el.rating >= ratingSearch
         )
-        .map((el, i) => (
-        <MovieCard key={i} movie={el} />
-        ))}
+        .map((movie,i) => 
+        <MovieCard key={i} movie={movie} />
+        
+        )}
     </div>
 );
 };

@@ -1,12 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@600&display=swap");
 body{
   background-color: #282c34;
-  background-image: url(https://images.cdn1.stockunlimited.net/preview1300/cinema-background-with-movie-objects_1823387.jpg);
+  background-image: url(https://images.cdn2.stockunlimited.net/preview1300/cinema-background-with-movie-objects_1823384.jpg);
 }
 .moviebest {
   text-align: center;
   font-family: 'Papyrus', fantasy;
   font-weight: 600;
-  font-size: 40px;
+  font-size: 50px;
   color: gold;
 }
 /* search  */
@@ -23,6 +24,10 @@ body{
   color: grey;
   padding-left: 10px;
   padding: 8px 0 8px 10px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
 }
 .search-container input:focus {
   outline: 0;
@@ -40,20 +45,33 @@ body{
   text-align: center;
   flex-direction: column;
   width: 250px;
-  height: 500px;
+  height: 550px;
   overflow: hidden;
   margin: 30px 40px;
   transform: scale(0.95);
   transition: all 0.5s;
-  background-color: #1e1b26;
+  background-color: #3d1302b6;
   overflow: hidden;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  -webkit-transform: scale(0.95);
+  -moz-transform: scale(0.95);
+  -ms-transform: scale(0.95);
+  -o-transform: scale(0.95);
+  width: 300px;
 }
 .Movie-Container:hover{
   box-shadow: 0 5px 10px -12.125px rgba(0, 0, 0, 0.2);
   transform: scale(1);
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
 }
 img {
-  width: 250px;
+  width: 300px;
   height: 375px;
 }
 .star-rating-movie {
@@ -69,6 +87,10 @@ img {
   margin: 0px 10px;
   color: white;
 }
+.year{
+  margin: 5px;
+  color: #ffffff;
+}
 .Movie-Description {
   font-size: small;
   margin: 10px 10px 10px 10px;
@@ -82,80 +104,265 @@ img {
 /* add button */
 .add-movie {
   text-align: center;
+  
 }
 .Add-btn {
-  border-radius: 5px;
-  background-color: #4CAF50;
-  border: transparent;
-  color: white;
-  font-size: 20px;
-  padding: 8px 20px;
-  margin: 30px 40px;
+  -webkit-appearance: none;
+  background: -webkit-gradient(to right, #ee786e  0%, #fceeb5 50%,#a2ccb6 100%);
+  background: linear-gradient(to right, #ee786e  0%, #fceeb5 50%,#a2ccb6 100%);
+  background-size: 500%;
+  border: none;
+  border-radius: 5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  color: #fff;
   cursor: pointer;
-  width: 288px;
-  height: 60px;
-  font-size: 37px;
+  font: 1.5em Raleway, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 5rem;
+  letter-spacing: 0.05em;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 20rem;
 }
 .Add-btn:hover {
-  background-color: rgba(32, 178, 170, 0.8);
+  animation-name: gradient;
+  -webkit-animation-name: gradient;
+  animation-duration: 2s;
+  -webkit-animation-duration: s;
+  animation-iteration-count: 1;
+  -webkit-animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
 }
-.Add-btn:focus {
-  outline: 0;
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100%;
+  }
 }
 .stars {
   color: gold;
-  font-size: 20px;
-  padding-left: 5px;
+    font-size: 25px;
+    padding-left: 10px;
 }
 .stars:hover {
   cursor: pointer;
 }
 /* add movie modal */
+
 .add-modal {
   position: relative;
-  top: 10%;
+  top: 0%;
   left: 35%;
-  padding: 20px;
+  padding: 0px;
   width: 500px;
   text-align: center;
+  
 }
-form h1 {
-  text-decoration: underline;
+
+.center {
+  position: relative;
+  padding: 25px 25px;
+  background: #fff;
+  border-radius: 10px;
 }
-form {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
+.center h1 {
+  font-size: 2em;
+  border-left: 10px solid dodgerblue;
+  padding: 26px;
+  color: #000;
+  letter-spacing: 3px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  padding-left: 0px;
+  font-family: Comic Sans MS;
 }
-form input {
-  width: 98%;
+.center .inputbox {
+  position: relative;
+  width: 380px;
   height: 30px;
-  border-radius: 5px;
-  border: 1px solid lightgray;
-  color: grey;
-  padding-left: 10px;
-  margin-top: 10px;
+  margin-bottom: 50px;
 }
-form label {
-  margin-top: 20px;
+.center .inputbox input {
+  position: absolute;
+  top: 0;
+  left: 8px;
+  width: 107%;
+  border: 2px solid #000;
+  outline: none;
+  background: none;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 1.2em;
 }
-form input:focus {
-  outline: 0;
+.center .inputbox:last-child {
+  margin-bottom: 0;
 }
+.center .inputbox span {
+  position: absolute;
+  top: 14px;
+  left: 20px;
+  font-size: 1em;
+  transition: 0.6s;
+  font-family: sans-serif;
+}
+.center .inputbox input:focus ~ span,
+.center .inputbox input:valid ~ span {
+  transform: translateX(-13px) translateY(-35px);
+  font-size: 1em;
+}
+.center .inputbox [type="button"] {
+  width: 100%;
+  background: dodgerblue;
+  color: #fff;
+  border: #fff;
+}
+.center .inputbox:hover [type="button"] {
+  background: linear-gradient(45deg, greenyellow, dodgerblue);
+}
+
+
 /* modal Buttons */
 .Modal-btn {
   border-radius: 5px;
-  background-color: lightseagreen;
+  background-color: dodgerblue;
   border: transparent;
   color: white;
-  padding: 8px 20px;
+  padding: 12px 20px;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-left: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  width: 35%;
+}
+.Modal-btn:hover {
+  background: linear-gradient(45deg, greenyellow, dodgerblue);
+}
+.Modal-btn:focus {
+  outline: 0;
+}
+.desc{
+  margin-top: 50px;
+  display: flex;
+  margin: auto;
+  max-width: 1366px;
+}
+.descrip{
+  margin-top: 50px;
+}
+.Movie-Description-informations{
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  background-color: rgba(210, 211, 151, 0.651);
+}
+.Movie-Description-Image{
+height: 40%;
+width:40%;
+}
+.Movie-Description-informations p {
+  font-size: 20px;
+  text-align: center;
+  margin: auto;
+}
+.Movie-Description-informations h1 {
+  font-size: 30px;
+  color: #1e1b26;
+  text-align: center;
+
+}
+.Movie-Description-informations h2 {
+text-align: center;
+margin-top: 0px;
+}
+.Movie-Description-informations h4{
+  color: #1e1b26;
+  text-align: center;
+  margin: auto;
+}
+
+.back{
+  text-align: center;
+  
+}
+.back-btn{
+  border-radius: 5px;
+  background-color: rgba(219, 181, 55, 0.849);
+  border: transparent;
+  color: white;
+  padding: 15px 30px;
   cursor: pointer;
   margin-top: 20px;
   margin-left: 10px;
 }
-.Modal-btn:hover {
-  background-color: rgba(32, 178, 170, 0.8);
+.back-btn:hover {
+  background-color: rgb(219, 181, 55);
 }
-.Modal-btn:focus {
+.back-btn:focus {
   outline: 0;
+}
+.trailer{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.description-btn {
+  /* reset */
+  -webkit-appearance: none;
+  border: 0;
+  outline: 0;
+  /* styles */
+  position: relative;
+  background: linear-gradient(to right, #ee786e 0%, #fceeb5 50%, #a2ccb6 100%);
+  background-size: 200% 100%;
+  padding: 1.5rem 2rem;
+  color: white;
+  border-radius: 100px;
+  font-size: 1.3rem;
+  font-family: "Source Code Pro";
+  transition: 0.3s;
+  width: 250px;
+}
+.description-btn:hover {
+  -webkit-animation: bruh 3s linear infinite;
+          animation: bruh 3s linear infinite;
+}
+@-webkit-keyframes bruh {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+@keyframes bruh {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.star{
+  text-align: center;
+  margin-top: 10px;
 }

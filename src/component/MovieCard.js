@@ -1,15 +1,20 @@
 import React from 'react';
 import Rate from './Rate'
-
-const MovieCard = ({ movie: {posterURL, rating, title, description} }) => {
+import { Link } from 'react-router-dom'
+const MovieCard = ({ movie }) => {
 return (
-    <div className='Movie-Container'>
-    <img src={posterURL} alt='' />
-    <Rate rating={rating}/>
-    <h1 className='Movie-Title'>{title}</h1>
+    <div key={movie.id} className='Movie-Container'>
+    <img src={movie.image} alt='' />
+    <Rate rating={movie.rating}/>
+    <h1 className='Movie-Title'>{movie.title}</h1>
     <div className='over-view'>
-    <h4 className='Movie-Description'>{description}</h4>
+        <h4 className='year'>{movie.year}</h4>
+    
     </div>
+    <Link to ={`/Description/${movie.id}`}><button className="description-btn">Description</button></Link>
+    <div className="watch-btn">
+    
+                </div>
     </div>
 );
 };
